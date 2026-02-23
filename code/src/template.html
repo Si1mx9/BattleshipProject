@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Battleship</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="ocean-bg"></div>
+    
+    <header>
+      <div class="title-wrapper">
+        <h1>BATTLESHIP</h1>
+        <div class="title-accent"></div>
+      </div>
+      <p class="subtitle">Naval Warfare</p>
+    </header>
+
+    <main>
+      <div class="message-container">
+        <div class="message-box">
+          <span class="message-icon">⚓</span>
+          <h2 id="turn-message">Place your ships!</h2>
+        </div>
+      </div>
+
+      <div class="boards-wrapper">
+        <div class="board-section player-section">
+          <div class="section-header">
+            <span class="section-icon">🚢</span>
+            <h3>Your Fleet</h3>
+          </div>
+          <div class="board-container">
+            <div class="coord-labels top">
+              <span>A</span><span>B</span><span>C</span><span>D</span><span>E</span>
+              <span>F</span><span>G</span><span>H</span><span>I</span><span>J</span>
+            </div>
+            <div class="board-with-coords">
+              <div class="coord-labels left">
+                <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+                <span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+              </div>
+              <div id="player-board" class="gameboard"></div>
+            </div>
+          </div>
+          <div class="fleet-status">
+            <span class="fleet-label">Fleet Status:</span>
+            <span class="fleet-count">5 ships</span>
+          </div>
+        </div>
+
+        <div class="vs-divider">
+          <span>VS</span>
+        </div>
+
+        <div class="board-section computer-section">
+          <div class="section-header">
+            <span class="section-icon">🎯</span>
+            <h3>Enemy Waters</h3>
+          </div>
+          <div class="board-container">
+            <div class="coord-labels top">
+              <span>A</span><span>B</span><span>C</span><span>D</span><span>E</span>
+              <span>F</span><span>G</span><span>H</span><span>I</span><span>J</span>
+            </div>
+            <div class="board-with-coords">
+              <div class="coord-labels left">
+                <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+                <span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+              </div>
+              <div id="computer-board" class="gameboard"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="legend">
+        <div class="legend-item">
+          <div class="legend-color ship"></div>
+          <span>Your Ship</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color hit"></div>
+          <span>Hit!</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color miss"></div>
+          <span>Miss</span>
+        </div>
+      </div>
+
+      <div class="controls-container">
+        <button id="randomize-btn" class="btn btn-secondary">
+          <span class="btn-icon">🎲</span>
+          Randomize Fleet
+        </button>
+        <button id="start-btn" class="btn btn-primary">
+          <span class="btn-icon">⚔️</span>
+          Start Battle
+        </button>
+        <button id="restart-btn" class="btn btn-danger hidden">
+          <span class="btn-icon">🔄</span>
+          Play Again
+        </button>
+      </div>
+    </main>
+
+    <footer>
+      <p>Created by <span class="author">SeifElislam</span></p>
+    </footer>
+  </body>
+</html>
