@@ -163,6 +163,13 @@ class DOMController {
     });
   }
 
+  updateFleetStatus(remaining) {
+    const fleetCountEl = document.querySelector('.fleet-count');
+    if (fleetCountEl) {
+      fleetCountEl.textContent = `${remaining} ship${remaining !== 1 ? 's' : ''}`;
+    }
+  }
+
   updateMessage(msg) {
     if (this.turnMessageEl) this.turnMessageEl.textContent = msg;
   }
